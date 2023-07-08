@@ -16,7 +16,7 @@ export default function Home(){
 
     return(
         <div>
-            <Input placeholder={"Correo electronico"} error={true} pass={false} showPass={showPass} setShowPass={setShowPass}/>
+            <Input placeholder={"Correo electronico"} error={false} pass={false} showPass={showPass} setShowPass={setShowPass}/>
             <Input placeholder={"Correo electronico"} error={true} pass={true} showPass={showPass} setShowPass={setShowPass}/>
         </div>
     )

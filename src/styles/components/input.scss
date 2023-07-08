@@ -1,26 +1,37 @@
 .containerInput{
-    border: 1px solid #66CC99;
+    border: 1.5px solid #66CC99;
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 325px;
-    &:hover{
-        border: 24px solid white;
-    }
-    &.error{
-        border: 1px solid #DC362E;
-    }
+    border-radius: 5px;
+    position: relative;
     input{
         all: unset;
         flex-grow: 1;
         padding: 15px 0px;
         padding-left: 23px;
-        padding-right: 7px;
+        padding-right: 50px;
         font-size: 14px;
         font-weight: 400;
+        &:focus{
+            border: 2.5px solid #66CC99;
+                border-radius: 5px;
+        }
+    }
+    &.error{
+        border: 1.5px solid #DC362E;
+        input{
+            &:focus{
+                border: 2.5px solid #DC362E;
+                border-radius: 5px;
+            }
+        }
     }
     svg{
         padding-left: 16px;
         padding-right: 16px;
+        position: absolute;
+        right: 0;
     }
 }
