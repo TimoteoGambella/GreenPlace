@@ -1,6 +1,6 @@
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-export default function Input({ placeholder,error,pass,showPass,setShowPass,extraClass}) {
+export default function Input({ placeholder,error,pass,showPass,setShowPass,extraClass,setData}) {
     return (
         <div id="inputContainer" className={`
                 containerInput ${extraClass}
@@ -10,6 +10,7 @@ export default function Input({ placeholder,error,pass,showPass,setShowPass,extr
             <input 
                 type={!pass ? "text" : showPass?"text":"password"}
                 placeholder={placeholder}
+                onChangeCapture={(e)=>setData(e.target.value)}
             />
             {!pass ? <></> :
                 pass && !showPass ?
