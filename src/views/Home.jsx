@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Button from "../components/buttons/Button";
-import Input from "../components/inputs/Input";
+import Input from "../components/input/Input";
 
 export default function Home(){
 
     const [data,setData]=useState("")
+    const [showPass,setShowPass]=useState(false)
 
     useEffect(() => {
         console.log(data)
@@ -15,23 +15,9 @@ export default function Home(){
     }
 
     return(
-        <div style={{backgroundColor:"#efefef",padding:"20px"}}>
-            {/* <Button number={1} text={"Button"} status={true} screen={"mobile"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={2} text={"Button"} status={true} screen={"mobile"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={3} text={"Button"} status={false} screen={"mobile"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={4} text={"Button"} status={false} screen={"mobile"}  child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={5} text={"Button"} status={false} screen={"mobile"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-
-            <Button number={1} text={"Button"} status={true} screen={"desktop"} child1={true}  child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={2} text={"Button"} status={true} screen={"desktop"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={3} text={"Button"} status={false} screen={"desktop"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-            <Button number={4} text={"Button"} status={false} screen={"desktop"} child1={true} classes={"claseExtra"} handleClick={handleClick} />
-            <Button number={5} text={"Button"} status={true} screen={"desktop"} child1={true} child2={true} child3={true} classes={"claseExtra"} handleClick={handleClick}/>
-
-            <Input label={"Label"} typeOfInput={"text"} error={false} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} typeOfInput={"text"} error={true} helper={"HOLA que tal"} disabled={false} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} typeOfInput={"text"} error={false} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/>
-            <Input label={"Error"} typeOfInput={"text"} error={true} helper={"HOLA que tal"} disabled={true} classes={"claseExtra"} handleChange={setData}/> */}
+        <div>
+            <Input placeholder={"Correo electronico"} error={true} pass={false} showPass={showPass} setShowPass={setShowPass}/>
+            <Input placeholder={"Correo electronico"} error={true} pass={true} showPass={showPass} setShowPass={setShowPass}/>
         </div>
     )
 }

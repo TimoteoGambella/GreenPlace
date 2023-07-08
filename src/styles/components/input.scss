@@ -1,49 +1,26 @@
-.specialInput {
-    &.active {
-        label {
-            color: #002F6C;
-        }
-
-        div {
-            fieldset {
-                border-color: #002F6C !important;
-            }
-        }
-
-        p {
-            color: #343434;
-        }
+.containerInput{
+    border: 1px solid #66CC99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 325px;
+    &:hover{
+        border: 24px solid white;
     }
-
-    &.error {
-        label {
-            color: #F73939;
-        }
-
-        div {
-            fieldset {
-                border-color: #F73939 !important;
-            }
-        }
-
-        p {
-            color: #F73939;
-        }
+    &.error{
+        border: 1px solid #DC362E;
     }
-
-    &.disabled {
-        label {
-            color: #67728A;
-        }
-
-        div {
-            fieldset {
-                border-color: #67728A !important;
-            }
-        }
-
-        p {
-            color: #67728A;
-        }
+    input{
+        all: unset;
+        flex-grow: 1;
+        padding: 15px 0px;
+        padding-left: 23px;
+        padding-right: 7px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    svg{
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }

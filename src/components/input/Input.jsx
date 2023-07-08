@@ -1,23 +1,22 @@
-import { TextField } from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-export default function Input({ label,error,helper,disabled,classes,handleChange,typeOfInput }) {
+export default function Input({ placeholder,error,pass,showPass,setShowPass}) {
     return (
-        <TextField
-            variant="outlined"
-            id={`outlined-basic`}
-            error={error && !disabled}
-            disabled={disabled}
-            label={label}
-            helperText={helper}
-            type={typeOfInput}
-            className={
-                `specialInput ${classes}
-                ${!error && !disabled && "active"}
-                ${error && !disabled && "error"}
-                ${!error && disabled && "disabled"}
-                ${error && disabled && "disabled"}`
+        <div className={`
+                containerInput
+                ${error?"error":""}
+            `}
+        >
+            <input 
+                type={!pass ? "text" : showPass?"text":"password"}
+                placeholder={placeholder}
+            />
+            {!pass ? <></> :
+                pass && !showPass ?
+                <Visibility onClick={()=>setShowPass(!showPass)}/>
+                : 
+                <VisibilityOff onClick={()=>setShowPass(!showPass)}/>
             }
-            onChangeCapture={(e) => handleChange(e.target.value)}
-        />
+        </div>
     )
 }
