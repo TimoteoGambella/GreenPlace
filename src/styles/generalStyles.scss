@@ -5,3 +5,19 @@
     line-height: normal;
     font-family: Roboto;
 }
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.mobileContainer{
+    max-width: 360px;
+    margin: auto;
+    background-color: white;
+    max-height: 90vh;
+    height: 100vh;
+    border-radius: 10px;
+}

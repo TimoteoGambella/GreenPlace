@@ -4,13 +4,15 @@ import Home from './views/Home';
 
 function App() {
   return (
-    <ApiContext>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </Router>
-    </ApiContext>
+    <div className='mobileContainer'>
+      <ApiContext>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
+      </ApiContext>
+    </div>
   );
 }
 

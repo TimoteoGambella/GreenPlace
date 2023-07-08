@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "../components/input/Input";
 import Button from "../components/button/Button";
+import Loader from "../components/loader/loader";
 
 export default function Home(){
 
@@ -21,6 +22,7 @@ export default function Home(){
             <Input placeholder={"Correo electronico"} error={true} pass={true} showPass={showPass} setShowPass={setShowPass} setData={setData}/>
 
             <Button width={360} status={true} text={"Siguiente"} handleClick={handleClick}/>
+            <Loader/>
         </div>
     )
 }
