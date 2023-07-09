@@ -2,14 +2,21 @@ INFORMACIÓN SOBRE EL CONSUMO DEL BACKEND
 
 ---------------------------------------------------------------------
 
-/getAllEvents => 
-    NO recibe parametros 
-    devuelve todos los eventos que existen en la BDD
+/getTypes => 
+    Recibe parametro type (inspirations o plants) 
+    devuelve todos types existentes
 
-/getAllUsers =>
-    NO recibe parametros 
-    devuelve todos los eventos que existen en la BDD
-    de momento no tiene una funcionalidad logica en el proyecto
+/getPlantsByType =>
+    Recibe parametro type de PLANTS 
+    devuelve todos los objetos que existen en la BDD de dicho type
+
+/getInspirationsByType =>
+    Recibe parametro type de INSPIRATIONS 
+    devuelve todos los objetos que existen en la BDD de dicho type
+
+/getAllInspirations =>
+    No recibe parametro 
+    devuelve todos los objetos que existen en la BDD
 
 /getUser =>
     Recibe un parametro id encriptado ( Para encriptar el id usar libreria CryptoJS => CryptoJS.AES.encrypt("id", "clave_secreta").toString();)
