@@ -2,7 +2,9 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Input({ placeholder,error,pass,showPass,setShowPass,extraClass,setData}) {
     return (
-        <div id="inputContainer" className={`
+        <div 
+            id="inputContainer"
+            className={`
                 containerInput ${extraClass}
                 ${error?"error":""}
             `}
